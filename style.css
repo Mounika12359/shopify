@@ -1,36 +1,327 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300");
-html,
-body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-}
-body {
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      
+    }
+
+    body {
+      background-color: #f9f9f9;
+      padding: 10px;
+    }
+
+    /* Outer Container */
+    .container {
+      width: 100%; /* responsive up to max-width */
+  max-width: 1440px;
+  height: 1034.72px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to right bottom, #873572, black);
+  flex-direction: column; /* vertical stacking */
+  gap: 33px;
+  transform: rotate(0deg); /* optional, no effect at 0deg */
+  opacity: 1;
+  margin: 0 auto;;   
+    }
+
+    /* Inner Container */
+    .inner-container {
+      width: 1440px;
+  height: 44px;
+  display: flex;
+  flex-direction: column; /* vertical flow */
+  gap: 10px;              /* spacing between child elements */
+  transform: rotate(0deg); /* optional, as 0deg means no rotation */
+  opacity: 1;
+    }
+
+    /* Another Container (outside frames) */
+    .bundle-sidebar {
+      width: 360px;
+  height: 957.72px; /* Rounded for simplicity */
+  transform: rotate(0deg);
+  opacity: 1;
+  display: flex; flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 20px;
+  flex: 1;
+  min-width: 280px;
+
+  display: flex;
+  flex-direction: column; /* vertical flow */
+  gap: 16px; /* optional: adjust vertical spacing */
+    }
+    .selected-products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 15px 0;
+  gap: 10px;
 }
-a {
-  display: inline-block;
-  color: lightgrey;
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
-  white-space: nowrap;
+
+.placeholder {
+  width: 60px;
+  height: 60px;
+  background: #eee;
+}
+
+.price-summary {
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+#cta-btn {
+  width: 100%;
   padding: 12px;
-  border: 1px solid white;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: all 0.15s ease-in-out;
-}
-
-a:hover {
-  background: rgba(0, 0, 0, 0.23);
+  background-color: gray;
   color: white;
-  transform: scale(1.03);
-  text-decoration: none;
-}
-a:active {
-  transform: scale(0.98);
+  border: none;
+  cursor: not-allowed;
 }
 
+    /* Product Bundle */
+    .product-bundle {
+       width: 100%;
+  max-width: 1440px;
+  height: 957.72px;
+  display: flex;
+flex-direction: row;
+ /* or 'row' depending on layout direction */
+  gap: 33px;
+  opacity: 1;
+  transform: rotate(0deg);
+  margin: 0 auto;           /* centers the container horizontally */
+  padding: 0 20px; 
+    }
+
+    .grid-custom {
+      flex: 3;
+  /*display: grid;*/
+  grid-template-columns: repeat(3, 1fr);
+  display: flex; flex-direction: column;
+  width: 1040px;
+  height: 957.72px;
+  gap: 48px;
+  opacity: 1;
+  transform: rotate(0deg);
+ 
+  
+    }
+    .product-card {
+  /*border: 1px solid #ccc;
+  padding: 16px;
+  text-align: center;*/
+  width: 316.66px;
+  height: 454.86px;
+  transform: rotate(0deg);
+  opacity: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+    .frame {
+      background-color: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 10px;
+    }
+
+    .frame img {
+      /*width: 100%;
+      height: auto;
+      border-radius: 6px;*/
+      width: 316.66px;
+  height: 326.66px;
+  transform: rotate(0deg);
+  opacity: 1;
+
+  display: flex;
+  flex-direction: column; /* flow: vertical */
+
+    }
+    .frame .product-card .product-title .add-btn:hover{
+      background-color: black;
+      color: white;
+    }
+  .frame .product-title {
+    width: 316.66px;
+  height: 113.2px;
+  display: flex;
+  flex-direction: column; /* vertical flow */
+  gap: 5px;
+  transform: rotate(0deg);
+  opacity: 1;
+  }
+  .frame .product-title button{
+    width: 316.66px;
+  height: 55px;
+  border-width: 1px;           /* stroke weight/1 */
+  border-style: solid;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;          /* horizontal flow */
+  transform: rotate(0deg);
+  opacity: 1;   
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  }
+  .frame .product-title span{
+    width: 12.5px;
+  height: 12.5px;
+  position: relative;
+  margin-left: 150px;
+  margin-top: 1px;
+  top: 1.75px;
+  left: 1.75px;
+  transform: rotate(0deg);
+  opacity: 1;
+  }
+  .bundle-sidebar {
+  width: 316px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  font-family: sans-serif;
+}
+
+.progress-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.progress-circle {
+  width: 12.5px;
+  height: 12.5px;
+  border-radius: 50%;
+  background-color: black;
+  margin-right: 8px;
+  position: relative;
+  top: 1.75px;
+  left: 1.75px;
+}
+
+.progress-line {
+  flex: 1;
+  height: 2px;
+  background-color: #e0e0e0;
+}
+
+.selected-products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.placeholder {
+  background-color: #f0f0f0;
+  height: 70px;
+  border-radius: 4px;
+}
+
+.price-summary {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+#cta-btn {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: not-allowed;
+}
+.selected-products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Add this or update your existing rules */
+
+.placeholder {
+  background: #f4f4f4;
+  height: 100px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder img {
+  max-height: 90px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/*.placeholder-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 5px;
+  
+}*/
+
+
+.product-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.product-price {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qty-controls button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.qty-controls span {
+  font-size: 14px;
+  min-width: 20px;
+  text-align: center;
+}
+.add-btn.disabled-btn {
+  background-color: #EBEBEB;
+  cursor: not-allowed;
+}
+
+#cta-btn.disabled-btn {
+  background-color:#444444 !important;
+  cursor: not-allowed !important;
+}
+
+.add-btn:hover:not(:disabled) {
+  background-color: black;
+}
+.add-btn{
+  background-color: white;
+}
