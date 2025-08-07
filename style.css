@@ -18,73 +18,41 @@
   flex-direction: column;
 }
 
-
-
-/* Wrap all your content inside a container with this class */
-@media (min-width: 1025px) {
-  .wrapper {
-    transform: scale(0.5);
-    transform-origin: top left;
-    width: 1695px;
-    height: 1194.72px;
-    margin-left: 127.5px;
-    margin-top: 80px;
-    margin-bottom: 80px;
-    margin-right: 127.5px;
-  }
-}
-
 .progress-bar-wrapper {
   width: 100%;
   margin: 10px 0;
 }
-
 .progress-bar {
   height: 10px;
   background-color: #eee;
   border-radius: 5px;
   overflow: hidden;
 }
-
 .progress-fill {
   height: 100%;
   width: 0%;
   background-color: #1a1a1a;
   transition: width 0.3s ease;
 }
-
-
-    /* Outer Container */
-   .container {
+.container {
       width: 1440px;
   max-width: 1440px;
   height: 1034.72px;
-  
-  /*display: flex;
-  flex-direction: column; 
-  gap: 33px;
-  opacity: 1;
-  margin: 0 auto;
-  padding: 40px;
-      min-height: 100vh;  */
-   }
-  
-
-    /* Inner Container */
-    .inner-container {
+}
+.inner-container {
       width: 1440px;
   height: 44px;
   display: flex;
-  flex-direction: column; /* vertical flow */
-  gap: 10px;              /* spacing between child elements */
-  transform: rotate(0deg); /* optional, as 0deg means no rotation */
+  flex-direction: column; 
+  gap: 10px;              
+  transform: rotate(0deg); 
   opacity: 1;
     }
 
-    /* Another Container (outside frames) */
+    
     .bundle-sidebar {
       width: 360px;
-  height: 957.72px; /* Rounded for simplicity */
+  height: 957.72px; 
   transform: rotate(0deg);
   opacity: 1;
   display: flex; flex-direction: column;
@@ -95,8 +63,8 @@
   
 
   display: flex;
-  flex-direction: column; /* vertical flow */
-  gap: 16px; /* optional: adjust vertical spacing */
+  flex-direction: column; 
+  gap: 16px; 
     }
     .selected-products {
   display: grid;
@@ -141,10 +109,6 @@
   color: #000;
   font-weight: bold;
 }
-
-
-
-
 #cta-btn {
   width: 100%;
   padding: 12px;
@@ -154,24 +118,24 @@
   cursor: not-allowed;
 }
 
-    /* Product Bundle */
+    
     .product-bundle {
        width: 100%;
   max-width: 1440px;
   height: 957.72px;
   display: flex;
 flex-direction: row;
- /* or 'row' depending on layout direction */
+ 
   gap: 33px;
   opacity: 1;
   transform: rotate(0deg);
-  margin: 0 auto;           /* centers the container horizontally */
+  margin: 0 auto;           
   padding: 0 20px; 
     }
 
     .grid-custom {
       flex: 3;
-  /*display: grid;*/
+  
   grid-template-columns: repeat(3, 1fr);
   display: flex; flex-direction: column;
   width: 1040px;
@@ -183,9 +147,7 @@ flex-direction: row;
   
     }
     .product-card {
-  /*border: 1px solid #ccc;
-  padding: 16px;
-  text-align: center;*/
+  
   width: 316.66px;
   height: 454.86px;
   transform: rotate(0deg);
@@ -207,16 +169,14 @@ flex-direction: row;
     }
 
     .frame img {
-      /*width: 100%;
-      height: auto;
-      border-radius: 6px;*/
+      
       width: 316.66px;
   height: 326.66px;
   transform: rotate(0deg);
   opacity: 1;
 
   display: flex;
-  flex-direction: column; /* flow: vertical */
+  flex-direction: column; 
 
     }
     .frame .product-card .product-title .add-btn:hover{
@@ -227,19 +187,18 @@ flex-direction: row;
     width: 316.66px;
   height: 113.2px;
   display: flex;
-  flex-direction: column; /* vertical flow */
-  gap: 5px;
+  flex-direction: column; 
   transform: rotate(0deg);
   opacity: 1;
   }
   .frame .product-title button{
     width: 316.66px;
   height: 55px;
-  border-width: 1px;           /* stroke weight/1 */
+  border-width: 1px;           
   border-style: solid;
   padding: 16px;
   display: flex;
-  flex-direction: row;          /* horizontal flow */
+  flex-direction: row;          
   transform: rotate(0deg);
   opacity: 1;   
   font-size: 15px;
@@ -270,16 +229,7 @@ flex-direction: row;
   margin-bottom: 12px;
 }
 
-.progress-circle {
-  width: 12.5px;
-  height: 12.5px;
-  border-radius: 50%;
-  background-color: black;
-  margin-right: 8px;
-  position: relative;
-  top: 1.75px;
-  left: 1.75px;
-}
+
 
 .progress-line {
   flex: 1;
@@ -324,7 +274,6 @@ flex-direction: row;
   margin-top: 20px;
 }
 
-/* Add this or update your existing rules */
 
 .placeholder {
   background: #f4f4f4;
@@ -342,14 +291,6 @@ flex-direction: row;
   border-radius: 6px;
 }
 
-/*.placeholder-details {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  padding: 5px;
-  
-}*/
 
 
 .product-name {
@@ -416,6 +357,7 @@ flex-direction: row;
     flex-direction: column;
     padding: 0 10px;
   }
+  
 
   .product-bundle {
     flex-direction: column;
@@ -445,6 +387,122 @@ flex-direction: row;
 
   .price-row {
     width: 100%;
+  }
+}
+/* Default for mobile (mobile-first) */
+ @media (max-width: 768px) {
+.wrapper {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  padding: 10px;
+  transform: none;
+}
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .inner-container {
+  margin-bottom: 20px;  /* space below the heading */
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  
+  text-align: center;
+  margin-bottom: -10px;
+}
+    
+  .grid-custom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.frame {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+  .product-card {
+  width: 300px;
+  background-color: white;
+  /*border: 1px solid #ddd;*/
+  border-radius: 8px;
+  padding: 10px;
+  
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;*/
+}
+
+
+  .pimage img {
+  width: 100%;
+  height: 200px;
+  display: block;
+}
+
+  
+.product-title {
+  padding: 10px;
+  text-align: start;
+  
+  font-family: 'Roboto', sans-serif;
+}
+
+.product-title h3 {
+  font-size: 0.5rem;
+  margin-bottom: 2px;
+  margin-left: -1px;
+  
+}
+
+.product-title p {
+  font-size: 0.5rem;
+  margin-bottom: 2px;
+  margin-left: -1px;
+  
+}
+
+
+.product-title .add-btn {
+  width: 50%;
+  height: 20px;
+  margin-top: 5px;
+  margin-left: -20px;
+  background-color:white;
+  color: black;
+  border: none;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+  .bundle-sidebar {
+    margin-top: 80px;
+    
+    width: 100%;
+  }
+}
+ 
+
+
+@media (min-width: 1025px) {
+  .wrapper {
+    transform: scale(0.5);
+    transform-origin: top left;
+    width: 1695px;
+    height: 1194.72px;
+    margin: 80px 127.5px;
   }
 }
 

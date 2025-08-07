@@ -38,7 +38,7 @@ const products = [
   },
 ];
 
-// State
+
 const selected = new Map();
 const placeholders = document.querySelector(".selected-products");
 const discountEl = document.getElementById("discount");
@@ -138,16 +138,16 @@ function updateTotals() {
   let discount = 0;
 
   if (itemCount > 0) {
-    // Apply 30% discount always when item count > 0
+    
     discount = total * 0.3;
 
     ctaBtn.disabled = false;
     ctaBtn.style.cursor = "pointer";
 
     if (itemCount < 3) {
-      ctaBtn.textContent = `Add ${3 - itemCount} More to Save More`; // CTA encouragement
+      ctaBtn.textContent = `Add ${3 - itemCount} More to Save More`; 
     } else {
-      ctaBtn.textContent = "Add 3 Items to Cart"; // Final CTA
+      ctaBtn.textContent = "Add 3 Items to Cart"; 
     }
   } else {
     ctaBtn.disabled = true;
@@ -160,7 +160,7 @@ function updateTotals() {
 }
 
 
-// Disable other buttons after 3 items
+
 function handleAddButtonState() {
   if (selected.size >= 3) {
     addButtons.forEach((btn) => {
@@ -172,7 +172,7 @@ function handleAddButtonState() {
   }
 }
 
-// On Proceed click
+
 ctaBtn.addEventListener("click", () => {
   if (ctaBtn.disabled) return;
 
