@@ -22,19 +22,19 @@ const products = [
     id: 4,
     name: "Urban Sportwear Combo",
     price: 150,
-    image: "./assets/photo-1432149877166-f75d49000351.jpg",
+    image: "./assets/photo-1632149877166-f75d49000351.jpg",
   },
   {
     id: 5,
     name: "Oversized Knit & Coat",
     price: 150,
-    image: "./assets/photo-1515886657613-9f3515b0c78f.jpg",
+    image: "./assets/photo-1608748010899-18f300247112.jpg",
   },
   {
     id: 6,
     name: "Chic Monochrome Blazer",
     price: 150,
-    image: "./assets/photo-1529139574466-a303027c1d8b.jpg",
+    image: "./assets/photo-1588117260148-b47818741c74.jpg",
   },
 ];
 
