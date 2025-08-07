@@ -6,23 +6,59 @@
       
     }
 
-    body {
-      background-color: #f9f9f9;
-      padding: 10px;
-    }
+    html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Wrap all your content inside a container with this class */
+.wrapper {
+  transform: scale(0.5); /* 0.5 means 50% zoom-out effect */
+  transform-origin: top left;
+  width: 1695px; /* Since we scale to 50%, increase width accordingly */
+  height: 1194.72px;
+  margin-left: 127.5px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-right: 127.5px;
+}
+.progress-bar-wrapper {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #1a1a1a;
+  transition: width 0.3s ease;
+}
+
 
     /* Outer Container */
-    .container {
-      width: 100%; /* responsive up to max-width */
+   .container {
+      width: 1440px;
   max-width: 1440px;
   height: 1034.72px;
-  display: flex;
-  flex-direction: column; /* vertical stacking */
+  
+  /*display: flex;
+  flex-direction: column; 
   gap: 33px;
-  transform: rotate(0deg); /* optional, no effect at 0deg */
   opacity: 1;
-  margin: 0 auto;;   
-    }
+  margin: 0 auto;
+  padding: 40px;
+      min-height: 100vh;  */
+   }
+  
 
     /* Inner Container */
     .inner-container {
@@ -46,6 +82,7 @@
   padding: 20px;
   flex: 1;
   min-width: 280px;
+  
 
   display: flex;
   flex-direction: column; /* vertical flow */
@@ -67,7 +104,36 @@
 .price-summary {
   margin: 15px 0;
   font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
 }
+.price-summary1{
+  display: flex;
+  flex-direction: row;
+
+}
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 306px;
+  height: 36px;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+.label {
+  color: #333;
+}
+
+.value {
+  color: #000;
+  font-weight: bold;
+}
+
+
+
 
 #cta-btn {
   width: 100%;

@@ -65,8 +65,10 @@ addButtons.forEach((btn, index) => {
 function updateUI() {
   renderPlaceholders();
   updateTotals();
-  handleAddButtonState(); // new
+  handleAddButtonState();
+  updateProgress(); // <-- Add this
 }
+
 
 function renderPlaceholders() {
   placeholders.innerHTML = "";
@@ -102,6 +104,13 @@ function renderPlaceholders() {
     placeholders.appendChild(textSlot);
   }
 }
+function updateProgress() {
+  const progressFill = document.getElementById("progress-fill");
+  const filledCount = selected.size; // 1, 2, or 3
+  const percentage = Math.min((filledCount / 3) * 100, 100);
+  progressFill.style.width = `${percentage}%`;
+}
+
 
 function updateQty(id, delta) {
   if (!selected.has(id)) return;
@@ -127,21 +136,29 @@ function updateTotals() {
   const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   let discount = 0;
-  if (itemCount >= 3) {
-  discount = total * 0.3;
-  ctaBtn.disabled = false;
-  ctaBtn.textContent = "Add 3 Items to Cart"; // <-- updated
-  ctaBtn.style.cursor = "pointer";
-} else {
-  ctaBtn.disabled = true;
-  ctaBtn.textContent = `Add ${3 - itemCount} Items to Proceed`;
-  ctaBtn.style.cursor = "not-allowed";
-}
 
+  if (itemCount > 0) {
+    // Apply 30% discount always when item count > 0
+    discount = total * 0.3;
 
-  discountEl.textContent = `- $${discount.toFixed(2)} (${itemCount >= 3 ? "30%" : "0%"})`;
+    ctaBtn.disabled = false;
+    ctaBtn.style.cursor = "pointer";
+
+    if (itemCount < 3) {
+      ctaBtn.textContent = `Add ${3 - itemCount} More to Save More`; // CTA encouragement
+    } else {
+      ctaBtn.textContent = "Add 3 Items to Cart"; // Final CTA
+    }
+  } else {
+    ctaBtn.disabled = true;
+    ctaBtn.textContent = `Add 3 Items to Proceed`;
+    ctaBtn.style.cursor = "not-allowed";
+  }
+
+  discountEl.textContent = `- $${discount.toFixed(2)} (30%)`;
   subtotalEl.textContent = `$${(total - discount).toFixed(2)}`;
 }
+
 
 // Disable other buttons after 3 items
 function handleAddButtonState() {

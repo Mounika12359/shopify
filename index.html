@@ -8,12 +8,13 @@
 </head>
 <body>
     
-
+<main class="view">
+  <div class="wrapper">
     <div class="container">
 
     <!-- Inner Container -->
     <div class="inner-container">
-       <h1 class="title">Buy 3 and Save 30%</h1>
+       <h1 class="title" style="text-align: center;">Buy 3 and Save 30%</h1>
     </div>
 
     <!-- Product Bundle -->
@@ -97,25 +98,32 @@
 
   <h2>Create a Bundle</h2>
   <p>Add at least <strong>3</strong> products and <strong>Save 30%</strong>.</p>
+  <div class="progress-bar-wrapper">
   <div class="progress-bar">
-    
-    <div class="progress-line"></div>
+    <div class="progress-fill" id="progress-fill"></div>
   </div>
-
+</div>
   <div class="selected-products">
     <div class="placeholder"></div>
     <div class="placeholder" style="width: 197.2px; height: 79px;"></div>
 
     <div class="placeholder"></div>
+    <div class="placeholder" style="width: 197.2px; height: 79px;"></div>
     <div class="placeholder"></div>
-    <div class="placeholder"></div>
-    <div class="placeholder"></div>
+    <div class="placeholder" style="width: 197.2px; height: 79px;"></div>
   </div>
 
   <div class="price-summary">
-    <div>Discount: <span id="discount">₹0.00</span></div>
-    <div>Subtotal: <span id="subtotal">₹0.00</span></div>
+  <div class="price-row">
+    <span class="label">Discount</span>
+    <span class="value" id="discount">- $0.00</span> <!-- <-- Add id -->
   </div>
+
+  <div class="price-row">
+    <span class="label">Subtotal</span>
+    <span class="value" id="subtotal">$0.00</span> <!-- <-- Add id -->
+  </div>
+</div>
 
   <button id="cta-btn" disabled>Add 3 Items to Proceed</button>
 </aside>
@@ -124,11 +132,14 @@
 
   </div>
     </div>
+  </div>
    
 
     <!-- Another Container (outside the grid) -->
    
 
   <script src="script.js"></script>
+
+  </main>
 </body>
 </html>
