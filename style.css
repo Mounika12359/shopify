@@ -13,6 +13,7 @@
   overflow: hidden;
 }
 
+
 /* Wrap all your content inside a container with this class */
 .wrapper {
   transform: scale(0.5); /* 0.5 means 50% zoom-out effect */
@@ -391,3 +392,50 @@ flex-direction: row;
 .add-btn{
   background-color: white;
 }
+@media (max-width: 768px) {
+  .wrapper {
+    transform: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  .container,
+  .inner-container,
+  .product-bundle,
+  .grid-custom {
+    width: 100%;
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .product-bundle {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .frame img {
+    width: 100%;
+    height: auto;
+  }
+
+  .bundle-sidebar {
+    width: 100%;
+    height: auto;
+    order: 2;
+  }
+
+  .selected-products {
+    grid-template-columns: 1fr;
+  }
+
+  .price-row {
+    width: 100%;
+  }
+}
+
