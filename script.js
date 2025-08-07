@@ -2,9 +2,9 @@
 const products = [
   {
     id: 1,
-    name: "Tie-Dye Lounge Set",
+    name: "Retro Red Streetwear",
     price: 150,
-    image: "./assets/photo-1432149877166-f75d49000351.jpg",
+    image: "./assets/photo-1529139574466-a303027c1d8b.jpg",
   },
   {
     id: 2,
@@ -14,13 +14,13 @@ const products = [
   },
   {
     id: 3,
-    name: "Retro Red Streetwear",
+    name: "Tie-Dye Lounge Set",
     price: 150,
-    image: "./assets/photo-1529139574466-a303027c1d8b.jpg",
+    image: "./assets/photo-1432149877166-f75d49000351.jpg",
   },
   {
     id: 4,
-    name: "Urban Sportwear Combo",
+    name: "Chic Monochrome Blazer",
     price: 150,
     image: "./assets/photo-1632149877166-f75d49000351.jpg",
   },
@@ -32,7 +32,7 @@ const products = [
   },
   {
     id: 6,
-    name: "Chic Monochrome Blazer",
+    name: "Urban Sportwear Combo",
     price: 150,
     image: "./assets/photo-1588117260148-b47818741c74.jpg",
   },
