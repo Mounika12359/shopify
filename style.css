@@ -15,16 +15,19 @@
 
 
 /* Wrap all your content inside a container with this class */
-.wrapper {
-  transform: scale(0.5); /* 0.5 means 50% zoom-out effect */
-  transform-origin: top left;
-  width: 1695px; /* Since we scale to 50%, increase width accordingly */
-  height: 1194.72px;
-  margin-left: 127.5px;
-  margin-top: 80px;
-  margin-bottom: 80px;
-  margin-right: 127.5px;
+@media (min-width: 1025px) {
+  .wrapper {
+    transform: scale(0.5);
+    transform-origin: top left;
+    width: 1695px;
+    height: 1194.72px;
+    margin-left: 127.5px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-right: 127.5px;
+  }
 }
+
 .progress-bar-wrapper {
   width: 100%;
   margin: 10px 0;
@@ -438,4 +441,5 @@ flex-direction: row;
     width: 100%;
   }
 }
+
 
