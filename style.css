@@ -10,8 +10,14 @@
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  box-sizing: border-box;
 }
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 
 
 /* Wrap all your content inside a container with this class */
